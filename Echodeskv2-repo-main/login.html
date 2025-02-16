@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            display: flex;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        .container {
+            display: flex;
+            width: 100%;
+            height: 100vh;
+        }
+
+        .login-container {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 40px;
+            background: white;
+        }
+
+        .login-container h1 {
+            font-size: 32px;
+            margin-bottom: 5px;
+        }
+
+        .login-container h2 {
+            font-size: 28px;
+            margin-bottom: 10px;
+        }
+
+        .login-form {
+            width: 100%;
+            max-width: 350px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .login-form input {
+            width: 100%;
+            padding: 10px;
+            margin: 8px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .login-form button {
+            width: 100%;
+            padding: 10px;
+            margin-top: 10px;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+            border-radius: 5px;
+            background: #6A0DAD;
+            color: white;
+            transition: background 0.3s;
+        }
+
+        .login-form button:hover {
+            background: #5a0ba0;
+        }
+
+        .google-btn {
+            background: #4285F4;
+        }
+
+        .google-btn:hover {
+            background: #357ae8;
+        }
+
+        .illustration-container {
+            flex: 1;
+            background: #D9B3FF;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .illustration {
+            width: 60%;
+            animation: fadeIn 1.5s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="login-container">
+            <h1>EchoDesk</h1>
+            <h2>Welcome Back</h2>
+            <form class="login-form" action="{{ url_for('login') }}" method="post">
+                <input type="email" name="email" placeholder="Email address" required>
+                <input type="password" name="password" placeholder="Password" required>
+                <button type="submit">Sign In</button>
+                <button type="button" class="google-btn">Sign in with Google</button>
+            </form>
+            
+            <p>Don't you have an account? <a href="signup.html">Sign Up</a></p>
+        </div>
+        <div class="illustration-container">
+            <img src="images/iluu.png" alt="Illustration" class="illustration">
+        </div>
+    </div>
+</body>
+</html>

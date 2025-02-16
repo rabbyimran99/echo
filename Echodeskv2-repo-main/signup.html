@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup Page</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            display: flex;
+            height: 100vh;
+            background: #121212;
+            color: white;
+        }
+
+        .container {
+            display: flex;
+            width: 100%;
+            height: 100vh;
+        }
+
+        .signup-container {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 40px;
+            background: #1e1e1e;
+        }
+
+        .signup-container h1 {
+            font-size: 28px;
+            margin-bottom: 20px;
+        }
+
+        .signup-form {
+            width: 100%;
+            max-width: 350px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .signup-form input {
+            width: 100%;
+            padding: 10px;
+            margin: 8px 0;
+            border: 1px solid #333;
+            border-radius: 5px;
+            background: #222;
+            color: white;
+        }
+        .login-form input, .login-form select {
+            width: 100%;
+            padding: 10px;
+            margin: 8px 0;
+            border: 1px solid #333;
+            border-radius: 5px;
+            background: #222;
+            color: #222;
+        }
+        .signup-form button {
+            width: 100%;
+            padding: 10px;
+            margin-top: 10px;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+            border-radius: 5px;
+            background: #6A0DAD;
+            color: white;
+            transition: background 0.3s;
+        }
+
+        .signup-form button:hover {
+            background: #004d40;
+        }
+
+        .testimonials-container {
+            flex: 1;
+            background: #1e1e1e;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 40px;
+            text-align: center;
+        }
+
+        .testimonial {
+            max-width: 400px;
+            margin-bottom: 20px;
+            animation: fadeIn 1.5s ease-in-out;
+        }
+
+        .testimonial img {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            margin-bottom: 10px;
+        }
+
+        
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="signup-container">
+            <h1>Let's Get Started</h1>
+            <form class="signup-form">
+                <input type="email" placeholder="Work Email" required>
+                <input type="text" placeholder="First Name" required>
+                <input type="text" placeholder="Last Name" required>
+                 <!-- Gender Selection -->
+                 <select required>
+                    <option value="" disabled selected>Select Gender</option>
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                    <option value="other">Other</option>
+                </select>
+
+                
+                <button type="submit">Continue with Email</button>
+            </form>
+            <p>Already have an account? <a href="login.html" style="color: #6A0DAD;">Log In</a></p>
+        </div>
+        <div class="testimonials-container">
+            <div class="testimonial">
+                <img src="images/photo-1.jpeg.jpg" alt="User Profile">
+                <p>"Echodesk ensures that its users remain informed by providing authentic news coverage related to ongoing investigations."</p>
+                <p><strong>Empowering Public Voices
+                </strong></p>
+            </div>
+            
+        </div>
+    </div>
+   
+</body>
+</html>
