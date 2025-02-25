@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ - Echodesk</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+        }
+        .oswald {
+            font-family: "Oswald", sans-serif;
+            font-optical-sizing: auto;
+            font-style: normal;
+        }
+
+        /* Navbar */
+        .navbar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px 20px;
+            background-color: white;
+            border-bottom: 2px solid #ddd;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .logo img {
+            height: 50px;
+            width: 50px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+        
+        .logo h1 {
+            font-size: 22px;
+            color: #006D77;
+            margin: 0;
+            font-weight: bold;
+        }
+        
+        .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 25px;
+            margin: 0;
+            padding: 0;
+        }
+        
+        .nav-links li {
+            display: inline;
+        }
+        
+        .nav-links a {
+            text-decoration: none;
+            color: #006D77;
+            font-size: 16px;
+            font-weight: bold;
+        }
+        
+        .right-section {
+            display: flex;
+            align-items: center;
+            gap: 10px; 
+        }
+        
+        .sign-in, .log-in {
+            background-color: #006D77; 
+            color: white;
+            border: none;
+            padding: 10px 20px; 
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: bold;
+            border-radius: 5px; 
+            transition: background-color 0.3s ease-in-out;
+        }
+        
+        .sign-in:hover, .log-in:hover {
+            background-color: #004D40; 
+        }
+        
+        .sign-in {
+            background-color: #007B8E; 
+        }
+        
+        .log-in {
+            background-color: #008C99; 
+        }
+        
+        .sign-in:hover {
+            background-color: #007B8E;
+        }
+
+        /* Animated Heading */
+        .container {
+            background-color: #006D77;
+            padding: 30px;
+            text-align: center; 
+            border-radius: 10px;
+            width: 100%;
+            margin: 0 auto;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            display: flex;
+            justify-content: center; 
+            align-items: center; 
+            flex-direction: column; 
+        }
+      
+        .typing {
+            display: inline-block;
+            border-right: 3px solid white;
+            padding-right: 5px;
+            animation: blink 0.7s steps(2, start) infinite;
+            font-size: 2rem;
+            color: white;
+            font-weight: 600;
+        }
+
+        @keyframes blink {
+            50% { border-color: transparent; }
+        }
+
+        /* FAQ Section */
+        .faq-container {
+            max-width: 800px;
+            margin: 40px auto;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        
+        .faq-title {
+            font-size: 2rem;
+            font-weight: bold;
+            text-align: center;
+            margin-bottom: 20px;
+            color: #006D77;
+        }
+
+        .faq-item {
+            border-bottom: 1px solid #ddd;
+            padding: 15px 0;
+            cursor: pointer;
+            transition: all 0.3s ease-in-out;
+        }
+
+        .faq-question {
+            font-size: 1.2rem;
+            font-weight: bold;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: #333;
+            transition: color 0.3s;
+        }
+
+        .faq-answer {
+            font-size: 1rem;
+            line-height: 1.6;
+            color: #555;
+            display: none;
+            padding-top: 10px;
+        }
+
+        .faq-question:hover {
+            color: #007bff;
+        }
+
+        .faq-question .arrow {
+            font-size: 1.2rem;
+            transition: transform 0.3s;
+        }
+
+        .faq-item.open .faq-answer {
+            display: block;
+            animation: fadeIn 0.3s ease-in-out;
+        }
+
+        .faq-item.open .faq-question .arrow {
+            transform: rotate(180deg);
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-5px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+
+
+        
+.footer {
+    background-color: #006D77;
+   
+    color: white;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: auto;
+    flex-wrap: wrap;
+}
+
+
+.footer-left {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.footer-logo img {
+    height: 50px;
+}
+
+.footer-nav {
+    display: flex;
+    gap: 10px;
+}
+
+.footer-nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.footer-nav span {
+    color: white;
+}
+
+
+.footer-right {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.footer-contact p {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.footer-social {
+    display: flex;
+    gap: 10px;
+}
+
+.footer-social a img {
+    height: 30px;
+}
+
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 10px;
+    font-size: 12px;
+}
+
+
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .footer-left {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .footer-right {
+        align-items: center;
+        margin-top: 10px;
+    }
+}
+
+
+
+
+.footer-contact {
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.footer-join-image {
+    margin-top: 10px;
+    height: 80px; 
+    width: auto; 
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+
+.contact-info {
+    background: none;
+    padding: 20px;
+    color: white;
+    font-size: 18px;
+}
+.contact-info h2 {
+    margin-bottom: 10px;
+}
+.contact-info p {
+    margin: 8px 0;
+    display: flex;
+    align-items: center;
+}
+.contact-info img {
+    width: 18px;
+    margin-right: 10px;
+}
+
+
+    </style>
+</head>
+<body class="oswald">
+
+    <nav class="navbar">
+        <div class="logo">
+            <img src="images/photo-1.jpeg.jpg" alt="Public Safety Testing">
+            <h1>Echodesk</h1>
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.php">HOME</a></li>
+            <li><a href="Complaint.php">COMPLAINT</a></li>
+            <li><a href="agency.html">AGENCIES</a></li>
+            <li><a href="FAQ.html">FREQUENTLY ASKED QUESTIONS</a></li>
+            <li><a href="#">CONTACT</a></li>
+        </ul>
+        <div class="right-section">
+            <a href="Sign In.php"><button class="sign-in oswald"> SIGN IN</button></a> 
+            <a href="signup.php"><button class="log-in oswald"> SIGN UP</button></a>
+           </div>
+    </nav>
+
+
+    <!-- Typing Effect Heading -->
+    <div class="container">
+        <h1><span id="typing-text" class="typing"></span></h1>
+    </div>
+
+    <!-- FAQ Section -->
+    <div class="faq-container">
+        <h2 class="faq-title">Frequently Asked Questions</h2>
+        
+        <div class="faq-item">
+            <div class="faq-question">
+                What is Echodesk? <span class="arrow">▼</span>
+            </div>
+            <div class="faq-answer">
+                Echodesk is a transparent platform designed to empower citizens to voice their grievances and
+                concerns while facilitating proper investigation and resolution in collaboration with various
+                agencies.
+            </div>
+        </div>
+        
+        <div class="faq-item">
+            <div class="faq-question">
+                How can I submit a complaint on Echodesk? <span class="arrow">▼</span>
+            </div>
+            <div class="faq-answer">
+                Users can submit complaints through our website by providing issue details along with multimedia evidence.
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">
+                Which types of complaints can I report on the platform? <span class="arrow">▼</span>
+            </div>
+            <div class="faq-answer">
+                Echodesk allows you to report a wide range of complaints, including public issues, service-related
+                concerns, and community matters.
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">
+                How does Echodesk ensure that my complaint is handled effectively? <span class="arrow">▼</span>
+            </div>
+            <div class="faq-answer">
+                Echodesk collaborates with law enforcement agencies and investigative bodies to analyze and forward complaints.
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">
+                Can I track the progress of my complaint? <span class="arrow">▼</span>
+            </div>
+            <div class="faq-answer">
+                Yes! Each submitted complaint generates a unique tracking ID, allowing users to monitor progress.
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        document.querySelectorAll('.faq-question').forEach(question => {
+            question.addEventListener('click', () => {
+                question.parentElement.classList.toggle('open');
+            });
+        });
+
+        const text = "FREQUENTLY ASKED QUESTIONS";
+        let index = 0;
+
+        function typeEffect() {
+            if (index < text.length) {
+                document.getElementById("typing-text").innerHTML += text.charAt(index);
+                index++;
+                setTimeout(typeEffect, 100);
+            }
+        }
+
+        window.onload = typeEffect;
+    </script>
+
+
+
+
+    <footer class="footer">
+        <div class="footer-container">
+            <!-- Left Section: Navigation + Logo -->
+            <div class="footer-left">
+
+
+
+
+                <div class="contact-info">
+                    <h2>Contact Info</h2>
+                    <p>📞+8801521401674 Mohammad Ebtesham</p>
+                    <p>📞+880 1865-406920 Towkir Akib</p>
+                    <p>📞+880 1402-734714 Md Imran Hossain </p>
+                    <p>📧 mohammadebtesham757@gmail.com</p>
+                    <p>📧 imranrb09@gmail.com</p>
+                    <p> City – Chittagong</p>
+                </div>
+
+
+
+
+            </div>
+
+            <!-- Right Section: Contact + Social Media -->
+            <div class="footer-right">
+                <div class="footer-contact">
+                    <p>Join Us</p>
+                </div>
+                <div class="footer-social">
+                    <a href="https://www.facebook.com"><img src="images/fb.png" alt="Facebook"></a>
+                    <a href="https://www.instagram.com"><img src="images/insta.png" alt="Instagram"></a>
+                    <a href="https://www.linkedin.com"><img src="images/in.png" alt="LinkedIn"></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-contact">
+
+            <img src="images/8564221.jpg" alt="Join Our Team" class="footer-join-image">
+        </div>
+
+
+
+        <div class="footer-bottom">
+            <p>© 2025 Public Safety Testing, Inc., All Rights Reserved. v3.1.12</p>
+        </div>
+
+
+    </footer>
+
+
+
+</body>
+</html>

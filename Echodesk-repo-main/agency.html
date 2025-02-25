@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agency Analytics</title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="script.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f7fc;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+        .header {
+            background-color: #ffffff96;
+            color: #007B8E;
+            padding: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .logo-container {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .logo {
+            width: 40px;
+            height: 40px;
+        }
+        .container {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            padding: 20px;
+        }
+        .card {
+            background: #007B8E;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            width: 250px;
+        }
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+        }
+        .view-profile {
+            background-color: #007B8E;
+            color: #007B8E;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            transition: background 0.3s ease;
+            border-radius: 5px;
+        }
+        .view-profile:hover {
+            background-color: #000000;
+        }
+        .view-all {
+            background-color: #007B8E;
+            color: #000000;
+            border: none;
+            padding: 15px 30px;
+            margin-top: 20px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: transform 0.3s ease;
+            border-radius: 5px;
+        }
+        .view-all:hover {
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="logo-container">
+            <img src="images/photo-1.jpeg.jpg" alt="AgencyAnalytics Logo" class="logo">
+            <h1>AgencyAnalytics</h1>
+        </div>
+    </div>
+    <div class="container">
+        <div class="card">
+            <div class="card-header">
+                <img src="images/lol.png" alt="HubSpot Logo" class="icon">
+                <h2>HubSpot </h2>
+            </div>
+            <p class="rating">⭐ 4.5 (6166)</p>
+            <button class="view-profile">VIEW PROFILE</button>
+            <div class="details">
+                <p>Ease of Use ⭐ 4.3</p>
+                <p>Customer Service ⭐ 4.4</p>
+                <p>Features ⭐ 4.4</p>
+                <p>Value for Money ⭐ 4.2</p>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-header">
+                <img src="images/lol2.png" alt="Reportei Logo" class="icon">
+                <h2>Reportei</h2>
+            </div>
+            <p class="rating">⭐ 4.7 (233)</p>
+            <button class="view-profile">VIEW PROFILE</button>
+            <div class="details">
+                <p>Ease of Use ⭐ 4.8</p>
+                <p>Customer Service ⭐ 4.6</p>
+                <p>Features ⭐ 4.5</p>
+                <p>Value for Money ⭐ 4.6</p>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-header">
+                <img src="images/lol3.png" alt="Semrush Logo" class="icon">
+                <h2>Semrush</h2>
+            </div>
+            <p class="rating">⭐ 4.7 (2275)</p>
+            <button class="view-profile">VIEW PROFILE</button>
+            <div class="details">
+                <p>Ease of Use ⭐ 4.3</p>
+                <p>Customer Service ⭐ 4.4</p>
+                <p>Features ⭐ 4.6</p>
+                <p>Value for Money ⭐ 4.3</p>
+            </div>
+        </div>
+    </div>
+    <button class="view-all">VIEW ALL Agencies</button>
+</body>
+</html>
